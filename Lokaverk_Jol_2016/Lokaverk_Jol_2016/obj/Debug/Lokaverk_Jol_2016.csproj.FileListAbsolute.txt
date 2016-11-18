@@ -1,0 +1,12 @@
+c:\users\0501983759\documents\visual studio 2013\Projects\Lokaverk_Jol_2016\Lokaverk_Jol_2016\bin\Debug\Lokaverk_Jol_2016.exe.config
+c:\users\0501983759\documents\visual studio 2013\Projects\Lokaverk_Jol_2016\Lokaverk_Jol_2016\bin\Debug\Lokaverk_Jol_2016.exe
+c:\users\0501983759\documents\visual studio 2013\Projects\Lokaverk_Jol_2016\Lokaverk_Jol_2016\bin\Debug\Lokaverk_Jol_2016.pdb
+c:\users\0501983759\documents\visual studio 2013\Projects\Lokaverk_Jol_2016\Lokaverk_Jol_2016\obj\Debug\Lokaverk_Jol_2016.csprojResolveAssemblyReference.cache
+c:\users\0501983759\documents\visual studio 2013\Projects\Lokaverk_Jol_2016\Lokaverk_Jol_2016\obj\Debug\Lokaverk_Jol_2016.exe
+c:\users\0501983759\documents\visual studio 2013\Projects\Lokaverk_Jol_2016\Lokaverk_Jol_2016\obj\Debug\Lokaverk_Jol_2016.pdb
+H:\Lokaverk\Lokaverk_Jol_2016\Lokaverk_Jol_2016\bin\Debug\Lokaverk_Jol_2016.exe.config
+H:\Lokaverk\Lokaverk_Jol_2016\Lokaverk_Jol_2016\obj\Debug\Lokaverk_Jol_2016.exe
+H:\Lokaverk\Lokaverk_Jol_2016\Lokaverk_Jol_2016\obj\Debug\Lokaverk_Jol_2016.pdb
+H:\Lokaverk\Lokaverk_Jol_2016\Lokaverk_Jol_2016\bin\Debug\Lokaverk_Jol_2016.exe
+H:\Lokaverk\Lokaverk_Jol_2016\Lokaverk_Jol_2016\bin\Debug\Lokaverk_Jol_2016.pdb
+H:\Lokaverk\Lokaverk_Jol_2016\Lokaverk_Jol_2016\obj\Debug\Lokaverk_Jol_2016.csprojResolveAssemblyReference.cache
