@@ -14,7 +14,6 @@ namespace Lokaverk_Jol_2016
 
                     Text text = new Text();
                     Stats stats = new Stats();
-                    Floor_1 Move = new Floor_1();
                     text.text_intro();
                     text.User_Name = Console.ReadLine();
                     text.text_runes();
@@ -33,7 +32,7 @@ namespace Lokaverk_Jol_2016
                     Error = true;
                 }
             } while (Error);*/
-                    Move.floor();
+
                     
 
             Console.WriteLine("the end");

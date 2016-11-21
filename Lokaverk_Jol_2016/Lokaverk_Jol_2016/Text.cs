@@ -47,13 +47,13 @@ namespace Lokaverk_Jol_2016
             Console.WriteLine("You feel as if your head has been beaten against a rock, as you are grasping your poor head a voice calls out to you");
             Console.WriteLine("'Greetings, traveller i have probed your mind of everything you know' The massive door behind you slams shut");
             Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("*Write your name*");
+            Console.WriteLine("\r\n*Write your name*");
         }
         //Runes Text
         public void text_runes()
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("'Your name is " + User_Name + ", You come from the west seeking treasure, but i can promise you nothing but suffering'");
+            Console.WriteLine("\r\n'Your name is " + User_Name + ", You come from the west seeking treasure, but i can promise you nothing but suffering'");
             Console.WriteLine("The voice dissipates untill it can't be heard anymore, the doors leading further into the tower open");
             Console.WriteLine("As you enter the next room you find three runes, one red one blue and one green with runes inscribed upon them, as if by magic you can understad the meaning of the runes");
             Console.WriteLine("The runes humm quitely, when suddenly the voice returns 'These runes will grant you knowledge in a ceratin field, you can only choose one, remember that nothing is free'");

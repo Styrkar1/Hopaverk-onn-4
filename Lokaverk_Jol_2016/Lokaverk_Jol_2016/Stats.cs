@@ -55,7 +55,7 @@ namespace Lokaverk_Jol_2016
             switch (touch)
             {
                 case 1:
-                    Console.WriteLine("As you touch the stone red you feel your muscles grow and any pain you had begins to numb");
+                    Console.WriteLine("\r\nAs you touch the stone red you feel your muscles grow and any pain you had begins to numb");
                     health = 160;
                     defence = 40;
                     touched = 1;
@@ -63,7 +63,7 @@ namespace Lokaverk_Jol_2016
                     break;
 
                 case 2:
-                    Console.WriteLine("As you touch the blue stone you feel your mind burst with new knowledge and you can feel arcane power course through your body");
+                    Console.WriteLine("\r\nAs you touch the blue stone you feel your mind burst with new knowledge and you can feel arcane power course through your body");
                     magic = 100;
                     mana = 200;
                     speed = 30;
@@ -82,7 +82,7 @@ namespace Lokaverk_Jol_2016
                     break;
 
                 case 4:
-                    Console.WriteLine("You refuse to touch any of the stones, not risking whatever price you might have to pay");
+                    Console.WriteLine("\r\nYou refuse to touch any of the stones, not risking whatever price you might have to pay");
                     touched = 4;
                     Class = "Resolute";
                     break;
@@ -94,7 +94,7 @@ namespace Lokaverk_Jol_2016
             int max_mana = mana + (10 * (level-1));
             Console.WriteLine("As you take a step back from the stones they crumble into dust, as if they had never been there");
             Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("\r\nHealth: " + health + "\r\nMax Health: " + max_health + "\r\nDefence: " + defence + "\r\nSpeed: " + speed + "\r\nMagic: " + magic + "\r\nMana: " + mana + "\r\nMax Mana: " + max_mana + "\r\nCritical Chance: " + crit_chance + "\r\nStone Touched: " + touched + "\r\nClass: " + Class + "\r\nLevel: " + level + "\r\nExp: " + exp + "/100");
+            Console.WriteLine("\r\nHealth: " + health + "\r\nMax Health: " + max_health + "\r\nDefence: " + defence + "\r\nSpeed: " + speed + "\r\nMagic: " + magic + "\r\nMana: " + mana + "\r\nMax Mana: " + max_mana + "\r\nCritical Chance: " + crit_chance + "%\r\nStone Touched: " + touched + "\r\nClass: " + Class + "\r\nLevel: " + level + "\r\nExp: " + exp + "/100");
         }
 
 
