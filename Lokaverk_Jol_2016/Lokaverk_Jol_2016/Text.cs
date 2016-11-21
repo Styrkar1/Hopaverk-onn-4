@@ -38,6 +38,7 @@ namespace Lokaverk_Jol_2016
             }
         }
         //Name Text
+        
         public void text_intro()
         {
             Console.ForegroundColor = ConsoleColor.Green;
@@ -59,6 +60,9 @@ namespace Lokaverk_Jol_2016
             Console.WriteLine("The runes humm quitely, when suddenly the voice returns 'These runes will grant you knowledge in a ceratin field, you can only choose one, remember that nothing is free'");
             Console.WriteLine("The red rune will grant you physical power and strength, the blue rune in magic and arcane knowledge and the green rune in quickness and criticals");
             Console.WriteLine("Wich rune do you touch?");
+        }
+        public void text_runes_2()
+        {
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine("\r\n1.Red rune\r\n2.Blue rune\r\n3.Green rune\r\n4.Ignore the runes");
         }

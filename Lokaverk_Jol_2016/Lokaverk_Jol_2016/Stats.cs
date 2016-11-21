@@ -19,8 +19,8 @@ namespace Lokaverk_Jol_2016
         int touched;
         string Class;
 
-        private int touch;
-        public int Touch
+        private string touch;
+        public string Touch
         {
             get
             {
@@ -32,8 +32,8 @@ namespace Lokaverk_Jol_2016
             }
         }
 
-        private int user_class;
-        public int User_Class
+        private string user_class;
+        public string User_Class
         {
             get
             {
@@ -41,20 +41,36 @@ namespace Lokaverk_Jol_2016
             }
             set
             {
-                user_class = value;
+                if (value == "1")
+                {
+                    user_class = "Warrior";
+                }
+                else if (value == "2")
+                {
+                    user_class = "Mage";
+                }
+                else if (value == "3")
+                {
+                    user_class = "Rouge";
+                }
+                else if (value == "4")
+                {
+                    user_class = "Resolute";
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    throw new ArgumentOutOfRangeException("error 001", value, "!!!is not valid!!!");
+                }      
             }
         }
 
-        public int strat_pick()
-        {
-            return Touch;
-        }
         public void stats_start()
         {
             Console.ForegroundColor = ConsoleColor.Green;
             switch (touch)
             {
-                case 1:
+                case "1":
                     Console.WriteLine("\r\nAs you touch the stone red you feel your muscles grow and any pain you had begins to numb");
                     health = 160;
                     defence = 40;
@@ -62,7 +78,7 @@ namespace Lokaverk_Jol_2016
                     Class = "Warrior";
                     break;
 
-                case 2:
+                case "2":
                     Console.WriteLine("\r\nAs you touch the blue stone you feel your mind burst with new knowledge and you can feel arcane power course through your body");
                     magic = 100;
                     mana = 200;
@@ -72,7 +88,7 @@ namespace Lokaverk_Jol_2016
                     Class = "Mage";
                     break;
 
-                case 3:
+                case "3":
                     Console.WriteLine("As you touch the green stone you feel as if you could run for miles and that you know where to aim to kill");
                     speed = 40;
                     magic = 20;
@@ -81,7 +97,7 @@ namespace Lokaverk_Jol_2016
                     Class = "Rouge";
                     break;
 
-                case 4:
+                case "4":
                     Console.WriteLine("\r\nYou refuse to touch any of the stones, not risking whatever price you might have to pay");
                     touched = 4;
                     Class = "Resolute";
