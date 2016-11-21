@@ -17,13 +17,17 @@ namespace Lokaverk_Jol_2016
                     text.text_intro();
                     text.User_Name = Console.ReadLine();
                     text.text_runes();
-           /* do
+           do
             {
                 try
-                {*/
-                    stats.Touch= Convert.ToInt32(Console.ReadLine());
+                {
+                    
+                    text.text_runes_2();
+                    stats.Touch = Console.ReadLine();
                     stats.stats_start();
-            /*
+                    Error = false;
+
+            
                 }
                 catch (ArgumentOutOfRangeException ex_floor_1)
                 {
@@ -31,7 +35,7 @@ namespace Lokaverk_Jol_2016
                     Console.WriteLine(ex_floor_1.Message);
                     Error = true;
                 }
-            } while (Error);*/
+            } while (Error);
 
                     
 
