@@ -1,6 +1,33 @@
 # Hopaverk-onn-4
 Hópaverkfni fyrir fjórða önn
 
+
+version 0.2
+changelong:
+
+1.Added a bunch of classes, such as monsters and items
+
+2.Added a class that populates monsters, items, potions etc...
+
+3.potion usage in late testing phase
+
+
+planned changes:
+
+Adding monsters and the bility to slay them
+
+Adding the ability to wield weapons
+
+Adding attack potions
+
+
+problems introduced:
+
+The player and it's attributes will likley never be inherited, it's just too inconvinient.
+
+(yet to merge with colleague)
+
+
 Version 0.01
 Changelog:
 
