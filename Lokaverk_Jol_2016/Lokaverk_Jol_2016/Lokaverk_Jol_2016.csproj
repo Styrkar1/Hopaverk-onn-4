@@ -49,6 +49,7 @@
     <Compile Include="Monster.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomNumberGenerator.cs" />
     <Compile Include="Stats.cs" />
     <Compile Include="Text.cs" />
     <Compile Include="Weapon.cs" />

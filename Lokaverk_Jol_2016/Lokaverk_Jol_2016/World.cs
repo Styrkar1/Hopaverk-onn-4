@@ -36,13 +36,12 @@ namespace Lokaverk_Jol_2016
         static World()
         {
             
-            PopulateItems();
-            
-       // PopulateMonsters();
+            PopulateItems();      
+            PopulateMonsters();
               
         }
         
-        public static void PopulateItems()
+        private static void PopulateItems()
         {
             new Weapon(ITEM_ID_RUSTY_SWORD, "Rusty sword", "Rusty swords", 0, 5, 5);
             new Weapon(ITEM_ID_CLUB, "Club", "Clubs", 3, 10, 10);
@@ -63,6 +62,25 @@ namespace Lokaverk_Jol_2016
             new Item(ITEM_ID_SPIDER_FANG, "Spider fang", "Spider fangs", 10);
             new Item(ITEM_ID_SPIDER_SILK, "Spider silk", "Spider silks", 10);
         }
+
+        private static void PopulateMonsters()
+        {
+            Monster rat = new Monster(MONSTER_ID_RAT, "Rat", 5, 3, 10, 3, 3);
+            rat.LootTable.Add(new LootItem(ItemByID(ITEM_ID_RAT_TAIL), 75, false));
+            rat.LootTable.Add(new LootItem(ItemByID(ITEM_ID_PIECE_OF_FUR),75,false));
+
+            Monster snake = new Monster(MONSTER_ID_SNAKE, "Snake", 5, 3, 10, 3, 3);
+            snake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SNAKE_FANG), 75, false));
+            snake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SNAKESKIN), 75, false));
+
+            Monster giantspider = new Monster(MONSTER_ID_GIANT_SPIDER, "Giant Spider", 20, 5, 40, 10, 10);
+            giantspider.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SPIDER_FANG), 75, true));
+            giantspider.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SPIDER_SILK), 25, false));
+
+            Monsters.Add(rat);
+            Monsters.Add(snake);
+            Monsters.Add(giantspider);
+        }
         
         public static Item ItemByID(int id)
         {
@@ -73,6 +91,18 @@ namespace Lokaverk_Jol_2016
                     return item;
                 }
 
+            }
+            return null;
+        }
+
+        public static Monster MonsterByID(int id)
+        {
+            foreach(Monster monster in Monsters)
+            {
+                if (monster.ID == id)
+                {
+                    return monster;
+                }
             }
             return null;
         }

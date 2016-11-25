@@ -59,10 +59,6 @@ namespace Lokaverk_Jol_2016
 
                     break;
 
-                case 2:
-                    Console.WriteLine("Too bad");
-                    goto case 1;
-
                 default:
                     Console.WriteLine("That's the spirit!");
                     goto case 1;
