@@ -1,6 +1,25 @@
 # Hopaverk-onn-4
 Hópaverkfni fyrir fjórða önn
 
+Version 0.2.5
+Changelog:
+
+1.Monster class is now more in depth
+
+2.added monsters to the game(more to be added)
+
+3.Potion is probably ready for usage
+
+4.Added a random number generator for usage in attacks and such
+
+Planned changes:
+
+Add an attack potion(increases damage)
+
+Add magic potion(increases magic damage,mana etc...)
+
+(yet to merge with colleague)
+
 
 version 0.2
 changelong:
