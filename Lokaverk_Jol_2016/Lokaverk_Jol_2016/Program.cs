@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace Lokaverk_Jol_2016
 {
@@ -10,31 +11,57 @@ namespace Lokaverk_Jol_2016
     {
         static void Main(string[] args)
         {
+            // need move and stat class
             bool Error = false;
+            bool Boss = false;
+            //characther info and pick
+                    Character user = new Character();// start pick
+                    Floor_1 one = new Floor_1();//First floor of the tower
+                    Enemy enemy = new Enemy();//what enemy you will figth
+                    Battle battle = new Battle();//the figth beetween you and the enemy
 
-                    Text text = new Text();
-                    Stats stats = new Stats();
-                   
-                    text.text_intro();
-                    text.User_Name = Console.ReadLine();
-                    text.text_runes();
-           /* do
+                    user.text_intro();
+                    user.User_Name = Console.ReadLine();
+                    user.text_runes();
+            do
             {
-                try
-                {*/
-                    stats.Touch= Convert.ToInt32(Console.ReadLine());
-                    stats.stats_start();
-            /*
+                user.text_runes_2();// spyr
+                try// error check
+                {
+                    
+                    user.Touch = Console.ReadLine();
+                    user.stats_start();//ef rett
+                    Error = false;
+            
                 }
                 catch (ArgumentOutOfRangeException ex_floor_1)
                 {
-
-                    Console.WriteLine(ex_floor_1.Message);
+                    Console.WriteLine(ex_floor_1.Message);//Character stats start
                     Error = true;
                 }
-            } while (Error);*/
-                   
+            } while (Error);
+
+
+            //floor 1
+            do//boss
+            {
+                one.Moveing();
+
+                if (one.battle)// if the are enemy there
+                {
+                    enemy.rat();
                     
+                    do
+                    {
+                      battle.figth();
+                    } while (battle.win==1);
+                    // text win
+                }
+                // text  local X
+                //pick where to move
+            } while (Boss);
+            Console.WriteLine("buið");
+            /*
             //Testing healing potion capabilities
             Console.WriteLine("Would you like to drink a potion?\r\n1.Yes\r\n2.No");
             int _Choice = Convert.ToInt32(Console.ReadLine());
@@ -43,19 +70,19 @@ namespace Lokaverk_Jol_2016
                 case 1:
                     HealingPotion potion = new HealingPotion(World.ITEM_ID_HEALING_POTION, "A healing potion", "Healing Potions", 50, 30);
                     Console.WriteLine("But first we have to hurt you a little bit\r\n*OOF*");
-                    stats.health = 50;
-                    Console.WriteLine("You have " + stats.health + " Health");
-                    Console.WriteLine("and then to give you a potion " + stats.potions++ + "\r\nYour belt feels heavyer as a potion materializes on it\r\n" + stats.potions);
+                    user.health = 50;
+                    Console.WriteLine("You have " + user.health + " Health");
+                    Console.WriteLine("and then to give you a potion " + user.potions++ + "\r\nYour belt feels heavyer as a potion materializes on it\r\n" + user.potions);
                     Console.WriteLine("You quickly chug the potion to Heal Yourself");
 
-                    stats.health = (stats.health + potion.AmountToHeal);
+                    user.health = (user.health + potion.AmountToHeal);
 
-                    if (stats.health > 100)
+                    if (user.health > 100)
                     {
-                        stats.health = 100;
+                        user.health = 100;
                     }
-                    stats.potions--;
-                    Console.WriteLine("Health: " + stats.health + "\r\nMax Health: " + stats.health);
+                    user.potions--;
+                    Console.WriteLine("Health: " + user.health + "\r\nMax Health: " + user.health);
 
                     break;
 
@@ -63,7 +90,9 @@ namespace Lokaverk_Jol_2016
                     Console.WriteLine("That's the spirit!");
                     goto case 1;
             }
-            Console.ReadLine();
+            Console.ReadLine();*/
+
+            Console.ReadKey();
         }
     }
 }
