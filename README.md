@@ -1,6 +1,19 @@
 # Hopaverk-onn-4
 Hópaverkfni fyrir fjórða önn
 
+Version 0.3
+Changelog:
+
+Merged with colleague, not sure what he did exactly but he is working on battles and movement.
+
+planned changes:
+
+Correcting his poor grammar.
+
+Making the movement function work properly, it is in late stages of construction.
+
+making battles work.
+
 Version 0.2.5
 Changelog:
 
