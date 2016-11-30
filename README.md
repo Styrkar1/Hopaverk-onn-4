@@ -1,10 +1,35 @@
-# Hopaverk-onn-4
+# THE TOWER
 Hópaverkfni fyrir fjórða önn
+
+Version 0.3.5
+Changelog:
+
+Merged with colleague
+
+1.Movement system added
+
+2.added weapons and monsters
+
+3.added more stats for weapons and monsters
+
+--
+
+Plannec changes:
+
+Add a combat system
+
+Refine the combat system
+
+Add Boss monster ( Unyeilding sentinels )
+
+-------------------------------------------
 
 Version 0.3
 Changelog:
 
 Merged with colleague, not sure what he did exactly but he is working on battles and movement.
+
+--
 
 planned changes:
 
@@ -13,6 +38,8 @@ Correcting his poor grammar.
 Making the movement function work properly, it is in late stages of construction.
 
 making battles work.
+
+-------------------------------------------
 
 Version 0.2.5
 Changelog:
@@ -33,6 +60,7 @@ Add magic potion(increases magic damage,mana etc...)
 
 (yet to merge with colleague)
 
+-------------------------------------------
 
 version 0.2
 changelong:
@@ -43,6 +71,7 @@ changelong:
 
 3.potion usage in late testing phase
 
+--
 
 planned changes:
 
@@ -59,6 +88,7 @@ The player and it's attributes will likley never be inherited, it's just too inc
 
 (yet to merge with colleague)
 
+-------------------------------------------
 
 Version 0.01
 Changelog:
@@ -71,6 +101,7 @@ Changelog:
 
 4.The program also does a little debug that shows all the stats in the end,
 
+--
 
 Planned changes:
 
