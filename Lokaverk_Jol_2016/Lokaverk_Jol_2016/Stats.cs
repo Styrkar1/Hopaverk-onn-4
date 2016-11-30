@@ -6,24 +6,21 @@ using System.Threading.Tasks;
 
 namespace Lokaverk_Jol_2016
 {
-    public class Stats
+    class Stats
     {
+        int level = 1;
+        int exp = 0;
+        int health = 100;
+        int defence = 10;
+        int speed = 10;
+        int magic = 10;
+        int mana = 50;
+        int crit_chance = 5;
+        int touched;
+        string Class;
 
-            public int level = 1;
-            public int exp = 0;
-            public int health = 100;
-            public int defence = 10;
-            public int speed = 10;
-            public int magic = 10;
-            public int mana = 50;
-            public int crit_chance = 5;
-            public int touched;
-            public int potions = 0;
-            public string Class;
-            public List<InventoryItem> Inventory { get; set; }
-
-        private int touch;
-        public int Touch
+        private string touch;
+        public string Touch
         {
             get
             {
@@ -35,8 +32,8 @@ namespace Lokaverk_Jol_2016
             }
         }
 
-        private int user_class;
-        public int User_Class
+        private string user_class;
+        public string User_Class
         {
             get
             {
@@ -44,29 +41,45 @@ namespace Lokaverk_Jol_2016
             }
             set
             {
-                user_class = value;
+                if (value == "1")
+                {
+                    user_class = "Warrior";
+                }
+                else if (value == "2")
+                {
+                    user_class = "Mage";
+                }
+                else if (value == "3")
+                {
+                    user_class = "Rouge";
+                }
+                else if (value == "4")
+                {
+                    user_class = "Resolute";
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    throw new ArgumentOutOfRangeException("error 001", value, "!!!is not valid!!!");
+                }      
             }
         }
 
-        public int stat_pick()
-        {
-            return Touch;
-        }
         public void stats_start()
         {
             Console.ForegroundColor = ConsoleColor.Green;
             switch (touch)
             {
-                case 1:
-                    Console.WriteLine("As you touch the stone red you feel your muscles grow and any pain you had begins to numb");
+                case "1":
+                    Console.WriteLine("\r\nAs you touch the stone red you feel your muscles grow and any pain you had begins to numb");
                     health = 160;
                     defence = 40;
                     touched = 1;
                     Class = "Warrior";
                     break;
 
-                case 2:
-                    Console.WriteLine("As you touch the blue stone you feel your mind burst with new knowledge and you can feel arcane power course through your body");
+                case "2":
+                    Console.WriteLine("\r\nAs you touch the blue stone you feel your mind burst with new knowledge and you can feel arcane power course through your body");
                     magic = 100;
                     mana = 200;
                     speed = 30;
@@ -75,7 +88,7 @@ namespace Lokaverk_Jol_2016
                     Class = "Mage";
                     break;
 
-                case 3:
+                case "3":
                     Console.WriteLine("As you touch the green stone you feel as if you could run for miles and that you know where to aim to kill");
                     speed = 40;
                     magic = 20;
@@ -84,8 +97,8 @@ namespace Lokaverk_Jol_2016
                     Class = "Rouge";
                     break;
 
-                case 4:
-                    Console.WriteLine("You refuse to touch any of the stones, not risking whatever price you might have to pay");
+                case "4":
+                    Console.WriteLine("\r\nYou refuse to touch any of the stones, not risking whatever price you might have to pay");
                     touched = 4;
                     Class = "Resolute";
                     break;
@@ -93,11 +106,11 @@ namespace Lokaverk_Jol_2016
                     Console.ForegroundColor = ConsoleColor.Red;
                     throw new ArgumentOutOfRangeException("error 001",Touch,"er ekki valkostur");
             }
-            int max_health = health + (10 * (level));
-            int max_mana = mana + (10 * (level));
+            int max_health = health + (10 * (level-1));
+            int max_mana = mana + (10 * (level-1));
             Console.WriteLine("As you take a step back from the stones they crumble into dust, as if they had never been there");
             Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("\r\nHealth: " + health + "\r\nMax Health: " + max_health + "\r\nDefence: " + defence + "\r\nSpeed: " + speed + "\r\nMagic: " + magic + "\r\nMana: " + mana + "\r\nMax Mana: " + max_mana + "\r\nCritical Chance: " + crit_chance + "\r\nStone Touched: " + touched + "\r\nClass: " + Class + "\r\nLevel: " + level + "\r\nExp: " + exp + "/100");
+            Console.WriteLine("\r\nHealth: " + health + "\r\nMax Health: " + max_health + "\r\nDefence: " + defence + "\r\nSpeed: " + speed + "\r\nMagic: " + magic + "\r\nMana: " + mana + "\r\nMax Mana: " + max_mana + "\r\nCritical Chance: " + crit_chance + "%\r\nStone Touched: " + touched + "\r\nClass: " + Class + "\r\nLevel: " + level + "\r\nExp: " + exp + "/100");
         }
 
 

@@ -13,13 +13,14 @@ namespace Lokaverk_Jol_2016
         public int MaximumDamage { get; set; }
         public int RewardExperiencePoints { get; set; }
         public int RewardGold { get; set; }
+        public int Mon_Defence { get; set; }
 
 
         public List<LootItem> LootTable { get; set; }
 
         internal List<InventoryItem> LootItems { get; set; }
 
-        public Monster(int id, string name, int maximumDamage, int rewardExperiencePoints, int rewardGold, int currentHitPoints, int maximumHitPoints)
+        public Monster(int id, string name, int maximumDamage, int rewardExperiencePoints, int rewardGold, int currentHitPoints, int maximumHitPoints, int mon_defence)
             : base(currentHitPoints, maximumHitPoints)
         {
             ID = id;
@@ -27,6 +28,7 @@ namespace Lokaverk_Jol_2016
             MaximumDamage = maximumDamage;
             RewardExperiencePoints = rewardExperiencePoints;
             RewardGold = rewardGold;
+            Mon_Defence = mon_defence;
 
             LootTable = new List<LootItem>();
 
@@ -36,7 +38,7 @@ namespace Lokaverk_Jol_2016
         internal Monster NewInstanceOfMonster()
         {
             Monster newMonster =
-                new Monster(ID, Name, MaximumDamage, RewardExperiencePoints, RewardGold, CurrentHitPoints, MaximumHitPoints);
+                new Monster(ID, Name, MaximumDamage, RewardExperiencePoints, RewardGold, CurrentHitPoints, MaximumHitPoints, Mon_Defence);
 
             // Add items to the lootedItems list, comparing a random number to the drop percentage
             foreach (LootItem lootItem in LootTable.Where(lootItem => RandomNumberGenerator.NumberBetween(1, 100) <= lootItem.DropPercentage))

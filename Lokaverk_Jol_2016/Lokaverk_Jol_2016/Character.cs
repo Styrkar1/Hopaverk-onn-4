@@ -24,6 +24,10 @@ namespace Lokaverk_Jol_2016
         public List<InventoryItem> Inventory { get; set; }
 
         //Get and Set
+        public int Max_Healt()
+        {
+            return health + (10 * (level));
+        }
 
         //Name
         private string user_name;
@@ -134,8 +138,9 @@ namespace Lokaverk_Jol_2016
 
                 case "ignore":
                     Console.WriteLine("You refuse to touch any of the stones, not risking whatever price you might have to pay");
-                    touched = "Ignore";
+                    touched = "ignore";
                     Class = "Resolute";
+                    defence = 20;
                     break;
                 default:
                     Console.ForegroundColor = ConsoleColor.Red;

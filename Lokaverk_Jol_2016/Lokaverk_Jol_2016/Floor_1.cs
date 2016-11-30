@@ -13,7 +13,7 @@ namespace Lokaverk_Jol_2016
         Random rnd = new Random();
         public bool battle = false;
 
-        private int location =1;
+        private int location=1;
         public int Location
         {
             get
@@ -25,343 +25,342 @@ namespace Lokaverk_Jol_2016
                 location = value;
             }
         }
-        
-        public string room_0()
+
+        private string pick;
+        public string Pick
         {
-            return"inn komu room";
+            get
+            {
+                return pick;
+            }
+            set
+            {
+                pick = value;
+            }
         }
-        public string room_1()
+
+        public void room()
         {
             int see = 1;
             int enemy = rnd.Next(1, 3);
-            if (enemy==0)//battle
-            {
-                battle = true;
-                return "enemy is near";
-                see = 0;
-            }
-            else
-            {
-                if (see==1)
-                {
-                    return "no one here";
-                    see = 0;
-                }
-                else
-                {
-                    return "i have been her before";
-
-                }
-            }
-        }
-        public string room_2()
-        {
-            int see = 1;
-            int enemy = rnd.Next(1, 3);
-            if (enemy==0)//battle
-            {
-                battle = true;
-                return "enemy is near";
-                see = 0;
-            }
-            else
-            {
-                if (see==1)
-                {
-                    return "no one here";
-                    see = 0;
-                }
-                else
-                {
-                    return "i have been her before";
-
-                }
-            }
-        }
-        public string room_3()
-        {
-            int see = 1;
-            int enemy = rnd.Next(1, 3);
-            if (enemy==0)//battle
-            {
-                battle = true;
-                return "enemy is near";
-                see = 0;
-            }
-            else
-            {
-                if (see==1)
-                {
-                    return "no one here";
-                    see = 0;
-                }
-                else
-                {
-                    return "i have been her before";
-
-                }
-            }
-        }
-        public string room_4()
-        {
-            int see = 1;
-            int enemy = rnd.Next(1, 3);
-            if (enemy==0)//battle
-            {
-                battle = true;
-                return "enemy is near";
-                see = 0;
-            }
-            else
-            {
-                if (see==1)
-                {
-                    return "no one here";
-                    see = 0;
-                }
-                else
-                {
-                    return "i have been her before";
-
-                }
-            }
-        }
-        public string room_5()
-        {
-            int see = 1;
-            int enemy = rnd.Next(1, 3);
-            if (enemy==0)//battle
-            {
-                battle = true;
-                return "enemy is near";
-                see = 0;
-            }
-            else
-            {
-                if (see==1)
-                {
-                    return "no one here";
-                    see = 0;
-                }
-                else
-                {
-                    return "i have been her before";
-
-                }
-            }
-        }
-        public string room_6()
-        {
-            int see = 1;
-            int enemy = rnd.Next(1, 3);
-            if (enemy==0)//battle
-            {
-                battle = true;
-                return "enemy is near";
-                see = 0;
-            }
-            else
-            {
-                if (see==1)
-                {
-                    return "no one here";
-                    see = 0;
-                }
-                else
-                {
-                    return "i have been her before";
-
-                }
-            }
-        }
-        public string room_7()
-        {
-            int see = 1;
-            int enemy = rnd.Next(1, 3);
-            if (enemy==0)//battle
-            {
-                battle = true;
-                return "enemy is near";
-                see = 0;
-            }
-            else
-            {
-                if (see==1)
-                {
-                    return "no one here";
-                    see = 0;
-                }
-                else
-                {
-                    return "i have been her before";
-
-                }
-            }
-        }
-        public string room_8()
-        {
-            int see = 1;
-            int enemy = rnd.Next(1, 3);
-            if (enemy==0)//battle
-            {
-                battle = true;
-                return "enemy is near";
-                see = 0;
-            }
-            else
-            {
-                if (see==1)
-                {
-                    return "no one here";
-                    see = 0;
-                }
-                else
-                {
-                    return "i have been her before";
-
-                }
-            }
-        }
-        public string room_9()
-        {
-            int see = 1;
-            int enemy = rnd.Next(1, 3);
-            if (enemy==0)//battle
-            {
-                battle = true;
-                return "enemy is near";
-                see = 0;
-            }
-            else
-            {
-                if (see==1)
-                {
-                    return "no one here";
-                    see = 0;
-                }
-                else
-                {
-                    return "i have been her before";
-
-                }
-            }
-        }
-        public string room_10()
-        {
-            //Boss = true;
-            return "the boss is her";
-        }
-        
-
-        public void Moveing()
-        {
-            Console.ForegroundColor = ConsoleColor.Green;
             switch (location)
             {
-                case 0:
-                    Console.WriteLine("Now entering the tower");
-                    break;
                 case 1:
-                    Console.WriteLine("\r\nRoom" + Location);
-                    Console.WriteLine("\r\nGo North\r\nGo East\r\nMenu");
-                    //if val = menu go to menu // if val = neew value
-                    break;
+                if (enemy==0)//battle
+                {
+                    battle = true;
+                    see = 0;
+
+                    Console.WriteLine("Enemy is here");
+                
+                }
+                else
+                {
+                    if (see==1)
+                    {
+                        see = 0;
+                        Console.WriteLine("no one here");
+                    }
+                    else
+                    {
+                        Console.WriteLine("i have been her before");
+
+                    }
+                }
+                break;
                 case 2:
-                    Console.WriteLine("\r\nRoom" + Location);
-                    Console.WriteLine("\r\nGo North\r\nGo East\r\nMenu");
-                    //if val = menu go to menu // if val = neew value
-                    break;
+                if (enemy==0)//battle
+                {
+                    battle = true;
+                    see = 0;
+
+                    Console.WriteLine("Enemy is here");
+                
+                }
+                else
+                {
+                    if (see==1)
+                    {
+                        see = 0;
+                        Console.WriteLine("no one here");
+                    }
+                    else
+                    {
+                        Console.WriteLine("i have been her before");
+
+                    }
+                }
+                break;
                 case 3:
-                    Console.WriteLine("\r\nRoom" + Location);
-                    Console.WriteLine("\r\nGo North\r\nGo East\r\nMenu");
-                    //if val = menu go to menu // if val = neew value
-                    break;
+                if (enemy == 0)//battle
+                {
+                    battle = true;
+                    see = 0;
+
+                    Console.WriteLine("Enemy is here");
+
+                }
+                else
+                {
+                    if (see == 1)
+                    {
+                        see = 0;
+                        Console.WriteLine("no one here");
+                    }
+                    else
+                    {
+                        Console.WriteLine("i have been her before");
+
+                    }
+                }
+                break;
                 case 4:
-                    Console.WriteLine("\r\nRoom" + Location);
-                    Console.WriteLine("\r\nGo North\r\nGo East\r\nMenu");
-                    //if val = menu go to menu // if val = neew value
-                    break;
+                if (enemy == 0)//battle
+                {
+                    battle = true;
+                    see = 0;
+
+                    Console.WriteLine("Enemy is here");
+
+                }
+                else
+                {
+                    if (see == 1)
+                    {
+                        see = 0;
+                        Console.WriteLine("no one here");
+                    }
+                    else
+                    {
+                        Console.WriteLine("i have been her before");
+
+                    }
+                }
+                break;
                 case 5:
-                    Console.WriteLine("\r\nRoom" + Location);
-                    Console.WriteLine("\r\nGo North\r\nGo East\r\nMenu");
-                    //if val = menu go to menu // if val = neew value
-                    break;
+                if (enemy == 0)//battle
+                {
+                    battle = true;
+                    see = 0;
+
+                    Console.WriteLine("Enemy is here");
+
+                }
+                else
+                {
+                    if (see == 1)
+                    {
+                        see = 0;
+                        Console.WriteLine("no one here");
+                    }
+                    else
+                    {
+                        Console.WriteLine("i have been her before");
+
+                    }
+                }
+                break;
                 case 6:
-                    Console.WriteLine("\r\nRoom" + Location);
-                    Console.WriteLine("\r\nGo North\r\nGo East\r\nMenu");
-                    //if val = menu go to menu // if val = neew value
-                    break;
+                if (enemy == 0)//battle
+                {
+                    battle = true;
+                    see = 0;
+
+                    Console.WriteLine("Enemy is here");
+
+                }
+                else
+                {
+                    if (see == 1)
+                    {
+                        see = 0;
+                        Console.WriteLine("no one here");
+                    }
+                    else
+                    {
+                        Console.WriteLine("i have been her before");
+
+                    }
+                }
+                break;
                 case 7:
-                    Console.WriteLine("\r\nRoom" + Location);
-                    Console.WriteLine("\r\nGo North\r\nGo East\r\nMenu");
-                    //if val = menu go to menu // if val = neew value
-                    break;
+                if (enemy == 0)//battle
+                {
+                    battle = true;
+                    see = 0;
+
+                    Console.WriteLine("Enemy is here");
+
+                }
+                else
+                {
+                    if (see == 1)
+                    {
+                        see = 0;
+                        Console.WriteLine("no one here");
+                    }
+                    else
+                    {
+                        Console.WriteLine("i have been her before");
+
+                    }
+                }
+                break;
                 case 8:
-                    Console.WriteLine("\r\nRoom" + Location);
-                    Console.WriteLine("\r\nGo North\r\nGo East\r\nMenu");
-                    //if val = menu go to menu // if val = neew value
-                    break;
+                if (enemy == 0)//battle
+                {
+                    battle = true;
+                    see = 0;
+
+                    Console.WriteLine("Enemy is here");
+
+                }
+                else
+                {
+                    if (see == 1)
+                    {
+                        see = 0;
+                        Console.WriteLine("no one here");
+                    }
+                    else
+                    {
+                        Console.WriteLine("i have been her before");
+
+                    }
+                }
+                break;
                 case 9:
-                    Console.WriteLine("\r\nRoom" + Location);
-                    Console.WriteLine("\r\nGo North\r\nGo East\r\nMenu");
-                    //if val = menu go to menu // if val = new value
-                    break;
+                if (enemy == 0)//battle
+                {
+                    battle = true;
+                    see = 0;
+
+                    Console.WriteLine("Enemy is here");
+
+                }
+                else
+                {
+                    if (see == 1)
+                    {
+                        see = 0;
+                        Console.WriteLine("no one here");
+                    }
+                    else
+                    {
+                        Console.WriteLine("i have been her before");
+
+                    }
+                }
+                break;
                 case 10:
-                    Console.WriteLine("\r\nRoom" + Location);
-                    Console.WriteLine("\r\nGo North\r\nGo East\r\nMenu");
-                    //if val = menu go to menu // if val = neew value
+                if (enemy == 0)//battle
+                {
+                    battle = true;
+                    see = 0;
+
+                    Console.WriteLine("Enemy is here");
+
+                }
+                else
+                {
+                    if (see == 1)
+                    {
+                        see = 0;
+                        Console.WriteLine("no one here");
+                    }
+                    else
+                    {
+                        Console.WriteLine("i have been her before");
+
+                    }
+                }
+                break;
+                default:
+                break;
+            }
+        }
+
+        public void Moving()
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            switch (pick)
+            {
+                case "north":
+                    if (location <= 6)
+	                {
+		                location=location+3; 
+                        Console.WriteLine("Moving North");
+	                }
+                    else
+	                {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("A rat hole, it is to small");
+	                }
+                    break;
+
+                case "south":
+                    if (location >=3)
+	                {
+		                location=location-3; 
+                        Console.WriteLine("Moving South");
+	                }
+                    else
+	                {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("That is a wall!");
+	                }
+                    break;
+
+                case "west":
+                    if (location != 1 && location != 4 && location != 7)
+	                {
+		                location=location-1;
+	                }
+                    else
+	                {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("A very fine looking wall");
+	                }
+                    break;
+
+                case "east":
+                    if (location != 3 && location != 6)
+	                {
+		                location=location+1;
+	                }
+                    else
+	                {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("A picture of a whale, oh no that is your mom");
+	                }
                     break;
                 default:
-                    break;
-            }
-        }
-        public void upproom()
-        {
-            if (location==0)
-	        {
-		        Console.WriteLine(room_0());
-	        }
-            if (location==1)
+                     Console.ForegroundColor = ConsoleColor.Red;
+                    throw new ArgumentOutOfRangeException("\r\nError 101", pick, "That is not a value Hint  North, South, West, East!");
+       }//switch    
+    }//void
+
+            public void display()
             {
-                Console.WriteLine(room_1());
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.WriteLine("\r\nRoom: " + location);
+                if (location>=3)
+                {
+                    Console.WriteLine("Go South");
+                }
+                if (location <= 6)
+                {
+                    Console.WriteLine("Go North");
+                }
+                if (location!=1&&location!=4&&location!=7)
+                {
+                    Console.WriteLine("Go West");
+                }
+                if (location!=3&&location!=6)
+                {
+                    Console.WriteLine("Go East");
+                }
             }
-                /*
-            else if (location == 2)
-            {
-                Console.WriteLine(room_2());
-            }
-            else if (location == 3)
-            {
-                Console.WriteLine(room_3());
-            }
-            else if (location == 4)
-            {
-                Console.WriteLine(room_4());
-            }
-            else if (location == 5)
-            {
-                Console.WriteLine(room_5());
-            }
-            else if (location == 6)
-            {
-                Console.WriteLine(room_6());
-            }
-            else if (location == 7)
-            {
-                Console.WriteLine(room_7());
-            }
-            else if (location == 8)
-            {
-                Console.WriteLine(room_8());
-            }
-            else if (location == 9)
-            {
-                Console.WriteLine(room_9());
-            }
-            else if (location == 10)
-            {
-                Console.WriteLine(room_10());
-            }*/
-        }
-    }
-}
+  }//class
+ 
+}//end

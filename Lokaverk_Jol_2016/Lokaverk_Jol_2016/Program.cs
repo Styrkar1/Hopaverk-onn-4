@@ -19,6 +19,9 @@ namespace Lokaverk_Jol_2016
                     Floor_1 one = new Floor_1();//First floor of the tower
                     Enemy enemy = new Enemy();//what enemy you will figth
                     Battle battle = new Battle();//the figth beetween you and the enemy
+                    World world = new World();
+
+                    world.PopulateItems();
 
                     user.text_intro();
                     user.User_Name = Console.ReadLine();
@@ -34,40 +37,51 @@ namespace Lokaverk_Jol_2016
                     Error = false;
             
                 }
-                catch (ArgumentOutOfRangeException ex_floor_1)
+                catch (ArgumentOutOfRangeException ex_start)
                 {
-                    Console.WriteLine(ex_floor_1.Message);//Character stats start
+                    Console.WriteLine(ex_start.Message);//Character stats start
                     Error = true;
                 }
             } while (Error);
 
-
             //floor 1
             do//boss
             {
-                one.Moveing();
-
-                if (one.battle)// if the are enemy there
+                one.display();
+                try// error check
                 {
-                    enemy.rat();
-                    
-                    do
+                    one.Pick =  Console.ReadLine().ToLower();
+                    one.room();
+                    if (one.battle)// if the are enemy there
                     {
-                      battle.figth();
-                    } while (battle.win==1);
-                    // text win
+                        enemy.rat();
+
+                        do
+                        {
+                            battle.figth();
+                        } while (battle.win == 1);
+                        // text win
+                    }//if  
+                    else
+                    {
+                        one.Moving();
+                    }
                 }
-                // text  local X
-                //pick where to move
-            } while (Boss);
-            Console.WriteLine("buið");
-            /*
+                catch (ArgumentOutOfRangeException ex_floor_1)
+                {
+                    Console.WriteLine(ex_floor_1.Message);
+                }
+               
+             } while (!Boss);
             //Testing healing potion capabilities
-            Console.WriteLine("Would you like to drink a potion?\r\n1.Yes\r\n2.No");
+            /*Console.WriteLine("Would you like to drink a potion?\r\n1.Yes\r\n2.No");
             int _Choice = Convert.ToInt32(Console.ReadLine());
             switch(_Choice)
             {
+                    
+            
                 case 1:
+                    orld.PopulateItems();
                     HealingPotion potion = new HealingPotion(World.ITEM_ID_HEALING_POTION, "A healing potion", "Healing Potions", 50, 30);
                     Console.WriteLine("But first we have to hurt you a little bit\r\n*OOF*");
                     user.health = 50;
@@ -77,7 +91,7 @@ namespace Lokaverk_Jol_2016
 
                     user.health = (user.health + potion.AmountToHeal);
 
-                    if (user.health > 100)
+                    if (user.health > user.max_health())
                     {
                         user.health = 100;
                     }
@@ -91,7 +105,6 @@ namespace Lokaverk_Jol_2016
                     goto case 1;
             }
             Console.ReadLine();*/
-
             Console.ReadKey();
         }
     }
