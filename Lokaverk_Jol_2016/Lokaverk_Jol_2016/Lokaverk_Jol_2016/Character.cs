@@ -9,50 +9,31 @@ namespace Lokaverk_Jol_2016
 {
     class Character
     {
-        //stats
+        //starts
         public int level = 1;
         public int exp = 0;
         public int health = 100;
+        public int damage = 1;
         public int defence = 10;
         public int speed = 10;
         public int magic = 10;
         public int mana = 50;
-        public int gold = 5;
         public int crit_chance = 5;
         public string touched;
         public int potions = 0;
-        public int W_equipped = 1;
         public string Class;
         public List<InventoryItem> Inventory { get; set; }
 
-        //Gets and Sets
-        public void AddExperiencePoints(int ExperiencePointsToAdd)
+        public int Max_Healt()
         {
-            exp += ExperiencePointsToAdd;
-            Max_Health();
+            return health + (10 * (level - 1));
+        }
+        public int Max_Mana()
+        {
+            return mana + (10 * (level - 1));
         }
 
-        //adding to inventory
-        public void AddItemToIventory(Item itemToAdd)
-        {
-            foreach (InventoryItem ii in Inventory)
-            {
-                if (ii.Details.ID == itemToAdd.ID)
-                {
-                    //since the player had the item, increasing the quantity of the item
-                    ii.Quantity++;
-
-                    return; //it's added, we're done and we leave the function
-                }
-            }
-            Inventory.Add(new InventoryItem(itemToAdd, 1));
-            // since they didn't have the item we just smack one in there with a quantity of 1
-        }
-        public int Max_Health()
-        {
-            return health + (10 * level);
-        }
-
+        //Get and Set
         //Name
         private string user_name;
         public string User_Name
@@ -134,7 +115,7 @@ namespace Lokaverk_Jol_2016
             switch (touch)
             {
                 case "red rune":
-                    Console.WriteLine("As you touch the stone red you feel your muscles grow and any pain you had begins to numb");
+                    Console.WriteLine("\r\nAs you touch the stone red you feel your muscles grow and any pain you had begins to numb");
                     health = 160;
                     defence = 40;
                     touched = "Red";
@@ -142,7 +123,7 @@ namespace Lokaverk_Jol_2016
                     break;
 
                 case "blue rune":
-                    Console.WriteLine("As you touch the blue stone you feel your mind burst with new knowledge and you can feel arcane power course through your body");
+                    Console.WriteLine("\r\nAs you touch the blue stone you feel your mind burst with new knowledge and you can feel arcane power course through your body");
                     magic = 100;
                     mana = 200;
                     speed = 30;
@@ -152,7 +133,7 @@ namespace Lokaverk_Jol_2016
                     break;
 
                 case "green rune":
-                    Console.WriteLine("As you touch the green stone you feel as if you could run for miles and that you know where to aim to kill");
+                    Console.WriteLine("\r\nAs you touch the green stone you feel as if you could run for miles and that you know where to aim to kill");
                     speed = 40;
                     magic = 20;
                     crit_chance = 30;
@@ -161,20 +142,17 @@ namespace Lokaverk_Jol_2016
                     break;
 
                 case "ignore":
-                    Console.WriteLine("You refuse to touch any of the stones, not risking whatever price you might have to pay");
+                    Console.WriteLine("\r\nYou refuse to touch any of the stones, not risking whatever price you might have to pay");
                     touched = "ignore";
                     Class = "Resolute";
-                    defence = 20;
                     break;
                 default:
                     Console.ForegroundColor = ConsoleColor.Red;
-                    throw new ArgumentOutOfRangeException("\r\nerror 001", Touch, "That is not a value !\r\nHint,  red rune, blue rune, green rune, ignore");
+                    throw new ArgumentOutOfRangeException("\r\nerror 001", Touch, "That is not a value !!!Hint  red rune, blue rune, green rune, ignore!!!");
             }
-            int max_health = health + (10 * (level));
-            int max_mana = mana + (10 * (level));
-            Console.WriteLine("As you take a step back from the stones they crumble into dust, as if they had never been there");
+            Console.WriteLine("\r\nAs you take a step back from the stones they crumble into dust, as if they had never been there");
             Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("\r\nHealth: " + health + "\r\nMax Health: " + max_health + "\r\nDefence: " + defence + "\r\nSpeed: " + speed + "\r\nMagic: " + magic + "\r\nMana: " + mana + "\r\nMax Mana: " + max_mana + "\r\nCritical Chance: " + crit_chance + "\r\nStone Touched: " + touched + "\r\nClass: " + Class + "\r\nLevel: " + level + "\r\nExp: " + exp + "/100");
+            Console.WriteLine("\r\nHealth: " + health + "\r\nMax Health: " + Max_Healt() + "\r\nDefence: " + defence + "\r\nSpeed: " + speed + "\r\nMagic: " + magic + "\r\nMana: " + mana + "\r\nMax Mana: " + Max_Mana() + "\r\nCritical Chance: " + crit_chance + "\r\nStone Touched: " + touched + "\r\nClass: " + Class + "\r\nLevel: " + level + "\r\nExp: " + exp + "/100");
         }
 
         //text file
@@ -183,7 +161,7 @@ namespace Lokaverk_Jol_2016
         public void text_intro()
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("As you stand outside the tower you feel and ominous presence");
+            Console.WriteLine("\r\nAs you stand outside the tower you feel and ominous presence");
             Console.WriteLine("Steeling yourself you decide to enter the tower");
             Console.WriteLine("As you push open the massive wooden doors you find yourelf in a large room,\r\nas you approach the exit of the room a sudden electric pain shocks you");
             Console.WriteLine("You feel as if your head has been beaten against a rock, as you are grasping your poor head a voice calls out to you");
@@ -195,7 +173,7 @@ namespace Lokaverk_Jol_2016
         public void text_runes()
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("'Your name is " + User_Name + ", You come from the west seeking treasure, but i can promise you nothing but suffering'");
+            Console.WriteLine("\r\n'Your name is " + User_Name + ", You come from the west seeking treasure, but i can promise you nothing but suffering'");
             Console.WriteLine("The voice dissipates untill it can't be heard anymore, the doors leading further into the tower open");
             Console.WriteLine("As you enter the next room you find three runes, one red one blue and one green with runes inscribed upon them, as if by magic you can understad the meaning of the runes");
             Console.WriteLine("The runes humm quitely, when suddenly the voice returns 'These runes will grant you knowledge in a ceratin field, you can only choose one, remember that nothing is free'");
@@ -209,10 +187,17 @@ namespace Lokaverk_Jol_2016
             Console.WriteLine("\r\nRed rune\r\nBlue rune\r\nGreen rune\r\nIgnore the runes");
         }
 
+        public void stats()
+        {
+            Console.WriteLine("\r\nLevel: " + level + "\r\nHealth: "+health+"/"+Max_Healt()+"\r\nDamage: "+damage);
+            Console.WriteLine("nDefence: "+defence+"\r\nSpeed: "+speed+"\r\nMagic: "+magic+"\r\nMana: "+mana+"/"+Max_Mana());
+            Console.WriteLine("nCrit chance: "+crit_chance+"\r\nWeapon: "/*+weapon+*/);
+            Console.WriteLine("Press any key to continue\r\n");
+            Console.ReadKey();
+        }
 
 
-
-
+        
 
     }
 }
