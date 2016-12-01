@@ -6,17 +6,15 @@ using System.Threading.Tasks;
 
 namespace Lokaverk_Jol_2016
 {
-    class Floor_1
+    class Floor_3
     {
-        // 1=true 0=false 
-
         Random rnd = new Random();
         Menu menu = new Menu();
         bool[] see = new bool[9];
         int[] enemy = new int[9];
-        int floor = 1;
+        public int floor = 3;
         int back = 0;
-        public bool Boss_1 = false;
+        public bool Boss_3 = false;
         public bool battle = false;
 
         private int location = 1;
@@ -220,7 +218,7 @@ namespace Lokaverk_Jol_2016
                     see[8] = true;
                     break;
                 case 10:
-                    Boss_1 = true;
+                    Boss_3 = true;
                     break;
                 default:
                     break;
