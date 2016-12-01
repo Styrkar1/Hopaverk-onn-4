@@ -1,6 +1,35 @@
 # THE TOWER
 Hópaverkfni fyrir fjórða önn
 
+
+
+-------------------------------------------
+
+Version 0.4
+Changelog:
+
+Merged with colleague
+
+1.Using a weapon should now work (not tested)
+
+2.Multiple floors now exist
+
+3.Moving is fully functional
+
+----
+
+planned changes:
+
+A nice, flashy intro
+
+Bosses
+
+Shops
+
+Menu at any time.
+
+-------------------------------------------
+
 Version 0.3.5
 Changelog:
 
@@ -12,9 +41,9 @@ Merged with colleague
 
 3.added more stats for weapons and monsters
 
---
+----
 
-Plannec changes:
+Planned changes:
 
 Add a combat system
 
@@ -29,7 +58,7 @@ Changelog:
 
 Merged with colleague, not sure what he did exactly but he is working on battles and movement.
 
---
+----
 
 planned changes:
 
@@ -71,7 +100,7 @@ changelong:
 
 3.potion usage in late testing phase
 
---
+----
 
 planned changes:
 
@@ -101,7 +130,7 @@ Changelog:
 
 4.The program also does a little debug that shows all the stats in the end,
 
---
+----
 
 Planned changes:
 
