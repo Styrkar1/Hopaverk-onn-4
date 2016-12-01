@@ -21,10 +21,8 @@ namespace Lokaverk_Jol_2016
                     Battle battle = new Battle();//the figth beetween you and the enemy
                     World world = new World();
 
-                    world.PopulateItems();
-
                     user.text_intro();
-                    user.User_Name = Console.ReadLine();
+                    user.User_Name = Console.ReadLine().ToLower();
                     user.text_runes();
             do
             {
@@ -73,38 +71,7 @@ namespace Lokaverk_Jol_2016
                 }
                
              } while (!Boss);
-            //Testing healing potion capabilities
-            /*Console.WriteLine("Would you like to drink a potion?\r\n1.Yes\r\n2.No");
-            int _Choice = Convert.ToInt32(Console.ReadLine());
-            switch(_Choice)
-            {
-                    
-            
-                case 1:
-                    orld.PopulateItems();
-                    HealingPotion potion = new HealingPotion(World.ITEM_ID_HEALING_POTION, "A healing potion", "Healing Potions", 50, 30);
-                    Console.WriteLine("But first we have to hurt you a little bit\r\n*OOF*");
-                    user.health = 50;
-                    Console.WriteLine("You have " + user.health + " Health");
-                    Console.WriteLine("and then to give you a potion " + user.potions++ + "\r\nYour belt feels heavyer as a potion materializes on it\r\n" + user.potions);
-                    Console.WriteLine("You quickly chug the potion to Heal Yourself");
 
-                    user.health = (user.health + potion.AmountToHeal);
-
-                    if (user.health > user.max_health())
-                    {
-                        user.health = 100;
-                    }
-                    user.potions--;
-                    Console.WriteLine("Health: " + user.health + "\r\nMax Health: " + user.health);
-
-                    break;
-
-                default:
-                    Console.WriteLine("That's the spirit!");
-                    goto case 1;
-            }
-            Console.ReadLine();*/
             Console.ReadKey();
         }
     }

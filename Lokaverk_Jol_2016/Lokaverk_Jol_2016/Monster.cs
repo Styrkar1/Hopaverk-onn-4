@@ -37,8 +37,7 @@ namespace Lokaverk_Jol_2016
 
         internal Monster NewInstanceOfMonster()
         {
-            Monster newMonster =
-                new Monster(ID, Name, MaximumDamage, RewardExperiencePoints, RewardGold, CurrentHitPoints, MaximumHitPoints, Mon_Defence);
+            Monster newMonster = new Monster(ID, Name, MaximumDamage, RewardExperiencePoints, RewardGold, CurrentHitPoints, MaximumHitPoints, Mon_Defence);
 
             // Add items to the lootedItems list, comparing a random number to the drop percentage
             foreach (LootItem lootItem in LootTable.Where(lootItem => RandomNumberGenerator.NumberBetween(1, 100) <= lootItem.DropPercentage))

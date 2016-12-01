@@ -8,7 +8,6 @@ namespace Lokaverk_Jol_2016
 {
     class World
     {
-
         public static readonly List<Item> Items = new List<Item>();
         public static readonly List<Monster> Monsters = new List<Monster>();
 
@@ -37,13 +36,13 @@ namespace Lokaverk_Jol_2016
         public const int MONSTER_ID_SNAKE = 2;
         public const int MONSTER_ID_GIANT_SPIDER = 3;
         public const int MONSTER_ID_GIANT_OGRE = 4;
-        
+
         public World()
         {
-            
-            PopulateItems();      
+
+            PopulateItems();
             PopulateMonsters();
-              
+
         }
 
         public void PopulateItems()
@@ -79,15 +78,15 @@ namespace Lokaverk_Jol_2016
             rat.LootTable.Add(new LootItem(ItemByID(ITEM_ID_RAT_TAIL), 75, false));
             rat.LootTable.Add(new LootItem(ItemByID(ITEM_ID_PIECE_OF_FUR), 75, false));
 
-            Monster snake = new Monster(MONSTER_ID_SNAKE, "Snake", 5, 3, 10, 3, 3, 10);
+            Monster snake = new Monster(MONSTER_ID_SNAKE, "Snake", 5, 3, 10, 3, 3, 3);
             snake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SNAKE_FANG), 75, false));
             snake.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SNAKESKIN), 75, false));
 
-            Monster giantspider = new Monster(MONSTER_ID_GIANT_SPIDER, "Giant Spider", 20, 5, 40, 10, 10, 20);
+            Monster giantspider = new Monster(MONSTER_ID_GIANT_SPIDER, "Giant Spider", 20, 5, 40, 10, 10, 5);
             giantspider.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SPIDER_FANG), 75, true));
             giantspider.LootTable.Add(new LootItem(ItemByID(ITEM_ID_SPIDER_SILK), 25, false));
 
-            Monster giantogre = new Monster(MONSTER_ID_GIANT_OGRE, "Giant Ogre", 30, 10, 15, 20, 20, 30);
+            Monster giantogre = new Monster(MONSTER_ID_GIANT_OGRE, "Giant Ogre", 30, 10, 15, 20, 20, 10);
             giantogre.LootTable.Add(new LootItem(ItemByID(ITEM_ID_OGRE_FLESH), 75, false));
             giantogre.LootTable.Add(new LootItem(ItemByID(ITEM_ID_OGRE_HORN), 25, false));
 
@@ -97,7 +96,7 @@ namespace Lokaverk_Jol_2016
             Monsters.Add(giantspider);
             Monsters.Add(giantogre);
         }
-        
+
         public static Item ItemByID(int id)
         {
             foreach (Item item in Items)

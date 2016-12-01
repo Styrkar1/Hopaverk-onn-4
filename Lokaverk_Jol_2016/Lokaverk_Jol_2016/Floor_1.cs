@@ -41,239 +41,192 @@ namespace Lokaverk_Jol_2016
 
         public void room()
         {
-            int see = 1;
+            bool[] see = new bool[10];
             int enemy = rnd.Next(1, 3);
             switch (location)
             {
                 case 1:
-                if (enemy==0)//battle
-                {
-                    battle = true;
-                    see = 0;
-
-                    Console.WriteLine("Enemy is here");
-                
-                }
-                else
-                {
-                    if (see==1)
+                    see[0] = true;
+                    if (see[0])
                     {
-                        see = 0;
-                        Console.WriteLine("no one here");
+                        Console.WriteLine("i have been her before");  
                     }
-                    else
+                    else  
                     {
-                        Console.WriteLine("i have been her before");
-
-                    }
-                }
+                        if (enemy==1)
+                        {
+                            battle = true;
+                            Console.WriteLine("Enemy is here");
+                        }
+                        else
+	                    { 
+                            Console.WriteLine("no one here");    
+	                    }
+                     }
+                    see[0] = true;
                 break;
                 case 2:
-                if (enemy==0)//battle
-                {
-                    battle = true;
-                    see = 0;
-
-                    Console.WriteLine("Enemy is here");
-                
-                }
-                else
-                {
-                    if (see==1)
+                    see[0] = true;
+                    if (see[0])
                     {
-                        see = 0;
-                        Console.WriteLine("no one here");
+                        Console.WriteLine("i have been her before");  
                     }
-                    else
+                    else  
                     {
-                        Console.WriteLine("i have been her before");
-
-                    }
-                }
+                        if (enemy==1)
+                        {
+                            battle = true;
+                            Console.WriteLine("Enemy is here");
+                        }
+                        else
+	                    { 
+                            Console.WriteLine("no one here");    
+	                    }
+                     }
+                    see[0] = true;
                 break;
                 case 3:
-                if (enemy == 0)//battle
-                {
-                    battle = true;
-                    see = 0;
-
-                    Console.WriteLine("Enemy is here");
-
-                }
-                else
-                {
-                    if (see == 1)
+                    see[0] = true;
+                    if (see[0])
                     {
-                        see = 0;
-                        Console.WriteLine("no one here");
+                        Console.WriteLine("i have been her before");  
                     }
-                    else
+                    else  
                     {
-                        Console.WriteLine("i have been her before");
-
-                    }
-                }
+                        if (enemy==1)
+                        {
+                            battle = true;
+                            Console.WriteLine("Enemy is here");
+                        }
+                        else
+	                    { 
+                            Console.WriteLine("no one here");    
+	                    }
+                     }
+                    see[0] = true;
                 break;
                 case 4:
-                if (enemy == 0)//battle
-                {
-                    battle = true;
-                    see = 0;
-
-                    Console.WriteLine("Enemy is here");
-
-                }
-                else
-                {
-                    if (see == 1)
+                    see[0] = true;
+                    if (see[0])
                     {
-                        see = 0;
-                        Console.WriteLine("no one here");
+                        Console.WriteLine("i have been her before");  
                     }
-                    else
+                    else  
                     {
-                        Console.WriteLine("i have been her before");
-
-                    }
-                }
+                        if (enemy==1)
+                        {
+                            battle = true;
+                            Console.WriteLine("Enemy is here");
+                        }
+                        else
+	                    { 
+                            Console.WriteLine("no one here");    
+	                    }
+                     }
+                    see[0] = true;
                 break;
                 case 5:
-                if (enemy == 0)//battle
-                {
-                    battle = true;
-                    see = 0;
-
-                    Console.WriteLine("Enemy is here");
-
-                }
-                else
-                {
-                    if (see == 1)
+                    see[0] = true;
+                    if (see[0])
                     {
-                        see = 0;
-                        Console.WriteLine("no one here");
+                        Console.WriteLine("i have been her before");  
                     }
-                    else
+                    else  
                     {
-                        Console.WriteLine("i have been her before");
-
-                    }
-                }
+                        if (enemy==1)
+                        {
+                            battle = true;
+                            Console.WriteLine("Enemy is here");
+                        }
+                        else
+	                    { 
+                            Console.WriteLine("no one here");    
+	                    }
+                     }
+                    see[0] = true;
                 break;
                 case 6:
-                if (enemy == 0)//battle
-                {
-                    battle = true;
-                    see = 0;
-
-                    Console.WriteLine("Enemy is here");
-
-                }
-                else
-                {
-                    if (see == 1)
+                    see[0] = true;
+                    if (see[0])
                     {
-                        see = 0;
-                        Console.WriteLine("no one here");
+                        Console.WriteLine("i have been her before");  
                     }
-                    else
+                    else  
                     {
-                        Console.WriteLine("i have been her before");
-
-                    }
-                }
+                        if (enemy==1)
+                        {
+                            battle = true;
+                            Console.WriteLine("Enemy is here");
+                        }
+                        else
+	                    { 
+                            Console.WriteLine("no one here");    
+	                    }
+                     }
+                    see[0] = true;
                 break;
                 case 7:
-                if (enemy == 0)//battle
-                {
-                    battle = true;
-                    see = 0;
-
-                    Console.WriteLine("Enemy is here");
-
-                }
-                else
-                {
-                    if (see == 1)
+                    see[0] = true;
+                    if (see[0])
                     {
-                        see = 0;
-                        Console.WriteLine("no one here");
+                        Console.WriteLine("i have been her before");  
                     }
-                    else
+                    else  
                     {
-                        Console.WriteLine("i have been her before");
-
-                    }
-                }
+                        if (enemy==1)
+                        {
+                            battle = true;
+                            Console.WriteLine("Enemy is here");
+                        }
+                        else
+	                    { 
+                            Console.WriteLine("no one here");    
+	                    }
+                     }
+                    see[0] = true;
                 break;
                 case 8:
-                if (enemy == 0)//battle
-                {
-                    battle = true;
-                    see = 0;
-
-                    Console.WriteLine("Enemy is here");
-
-                }
-                else
-                {
-                    if (see == 1)
+                    see[0] = true;
+                    if (see[0])
                     {
-                        see = 0;
-                        Console.WriteLine("no one here");
+                        Console.WriteLine("i have been her before");  
                     }
-                    else
+                    else  
                     {
-                        Console.WriteLine("i have been her before");
-
-                    }
-                }
+                        if (enemy==1)
+                        {
+                            battle = true;
+                            Console.WriteLine("Enemy is here");
+                        }
+                        else
+	                    { 
+                            Console.WriteLine("no one here");    
+	                    }
+                     }
+                    see[0] = true;
                 break;
                 case 9:
-                if (enemy == 0)//battle
-                {
-                    battle = true;
-                    see = 0;
-
-                    Console.WriteLine("Enemy is here");
-
-                }
-                else
-                {
-                    if (see == 1)
+                    see[0] = true;
+                    if (see[0])
                     {
-                        see = 0;
-                        Console.WriteLine("no one here");
+                        Console.WriteLine("i have been her before");  
                     }
-                    else
+                    else  
                     {
-                        Console.WriteLine("i have been her before");
-
-                    }
-                }
+                        if (enemy==1)
+                        {
+                            battle = true;
+                            Console.WriteLine("Enemy is here");
+                        }
+                        else
+	                    { 
+                            Console.WriteLine("no one here");    
+	                    }
+                     }
+                    see[0] = true;
                 break;
                 case 10:
-                if (enemy == 0)//battle
-                {
-                    battle = true;
-                    see = 0;
-
-                    Console.WriteLine("Enemy is here");
-
-                }
-                else
-                {
-                    if (see == 1)
-                    {
-                        see = 0;
-                        Console.WriteLine("no one here");
-                    }
-                    else
-                    {
-                        Console.WriteLine("i have been her before");
-
-                    }
-                }
+                //boss
                 break;
                 default:
                 break;
@@ -302,12 +255,12 @@ namespace Lokaverk_Jol_2016
                     if (location >=3)
 	                {
 		                location=location-3; 
-                        Console.WriteLine("Moving South");
+                        Console.WriteLine("\r\nMoving South");
 	                }
                     else
 	                {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("That is a wall!");
+                        Console.WriteLine("\r\nThat is a wall!");
 	                }
                     break;
 
@@ -315,6 +268,7 @@ namespace Lokaverk_Jol_2016
                     if (location != 1 && location != 4 && location != 7)
 	                {
 		                location=location-1;
+                        Console.WriteLine("\r\nMoving West");
 	                }
                     else
 	                {
@@ -327,6 +281,7 @@ namespace Lokaverk_Jol_2016
                     if (location != 3 && location != 6)
 	                {
 		                location=location+1;
+                        Console.WriteLine("\r\nMoving East");
 	                }
                     else
 	                {
@@ -338,9 +293,9 @@ namespace Lokaverk_Jol_2016
                      Console.ForegroundColor = ConsoleColor.Red;
                     throw new ArgumentOutOfRangeException("\r\nError 101", pick, "That is not a value Hint  North, South, West, East!");
        }//switch    
-    }//void
+    }
 
-            public void display()
+        public void display()
             {
                 Console.ForegroundColor = ConsoleColor.Magenta;
                 Console.WriteLine("\r\nRoom: " + location);
@@ -362,5 +317,4 @@ namespace Lokaverk_Jol_2016
                 }
             }
   }//class
- 
 }//end

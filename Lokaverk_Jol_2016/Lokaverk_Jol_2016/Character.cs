@@ -9,7 +9,7 @@ namespace Lokaverk_Jol_2016
 {
     class Character
     {
-        //starts
+        //stats
         public int level = 1;
         public int exp = 0;
         public int health = 100;
@@ -17,16 +17,40 @@ namespace Lokaverk_Jol_2016
         public int speed = 10;
         public int magic = 10;
         public int mana = 50;
+        public int gold = 5;
         public int crit_chance = 5;
         public string touched;
         public int potions = 0;
+        public int W_equipped = 1;
         public string Class;
         public List<InventoryItem> Inventory { get; set; }
 
-        //Get and Set
-        public int Max_Healt()
+        //Gets and Sets
+        public void AddExperiencePoints(int ExperiencePointsToAdd)
         {
-            return health + (10 * (level));
+            exp += ExperiencePointsToAdd;
+            Max_Health();
+        }
+
+        //adding to inventory
+        public void AddItemToIventory(Item itemToAdd)
+        {
+            foreach (InventoryItem ii in Inventory)
+            {
+                if (ii.Details.ID == itemToAdd.ID)
+                {
+                    //since the player had the item, increasing the quantity of the item
+                    ii.Quantity++;
+
+                    return; //it's added, we're done and we leave the function
+                }
+            }
+            Inventory.Add(new InventoryItem(itemToAdd, 1));
+            // since they didn't have the item we just smack one in there with a quantity of 1
+        }
+        public int Max_Health()
+        {
+            return health + (10 * level);
         }
 
         //Name
@@ -144,7 +168,7 @@ namespace Lokaverk_Jol_2016
                     break;
                 default:
                     Console.ForegroundColor = ConsoleColor.Red;
-                    throw new ArgumentOutOfRangeException("\r\nerror 001", Touch, "That is not a value !!!Hint  red rune, blue rune, green rune, ignore!!!");
+                    throw new ArgumentOutOfRangeException("\r\nerror 001", Touch, "That is not a value !\r\nHint,  red rune, blue rune, green rune, ignore");
             }
             int max_health = health + (10 * (level));
             int max_mana = mana + (10 * (level));
