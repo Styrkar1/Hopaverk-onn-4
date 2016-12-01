@@ -1,7 +1,12 @@
 # THE TOWER
 Hópaverkfni fyrir fjórða önn
 
+-------------------------------------------
 
+Version 0.4.5
+changelog:
+
+A bunch of things colleague did, just merged to keep it up to date
 
 -------------------------------------------
 
@@ -16,7 +21,7 @@ Merged with colleague
 
 3.Moving is fully functional
 
-----
+---
 
 planned changes:
 
@@ -41,7 +46,7 @@ Merged with colleague
 
 3.added more stats for weapons and monsters
 
-----
+---
 
 Planned changes:
 
@@ -58,7 +63,7 @@ Changelog:
 
 Merged with colleague, not sure what he did exactly but he is working on battles and movement.
 
-----
+---
 
 planned changes:
 
@@ -100,7 +105,7 @@ changelong:
 
 3.potion usage in late testing phase
 
-----
+---
 
 planned changes:
 
@@ -130,7 +135,7 @@ Changelog:
 
 4.The program also does a little debug that shows all the stats in the end,
 
-----
+---
 
 Planned changes:
 
