@@ -1,6 +1,25 @@
 # THE TOWER
 Hópaverkfni fyrir fjórða önn
 
+Version 0.5
+Changelog:
+
+1.More floors
+
+2.Shop in the works
+
+3.an intro
+
+4.Refined movement system
+
+---
+
+Planned changes:
+
+Functional combat
+
+fcuntional shop
+
 -------------------------------------------
 
 Version 0.4.5
