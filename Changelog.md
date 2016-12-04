@@ -1,6 +1,21 @@
 # THE TOWER
 Hópaverkfni fyrir fjórða önn
 
+Version 0.5.5
+Changelog:
+
+Added a few more floor classes
+
+And a few functions for usability
+
+---
+
+Planned changes:
+
+This is the vinal version we make, we return the project today.
+
+-------------------------------------------
+
 Version 0.5
 Changelog:
 
