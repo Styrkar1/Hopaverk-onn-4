@@ -47,6 +47,8 @@
     <Compile Include="Floor_1.cs" />
     <Compile Include="Floor_2.cs" />
     <Compile Include="Floor_3.cs" />
+    <Compile Include="Floor_4.cs" />
+    <Compile Include="Floor_5.cs" />
     <Compile Include="HPotion.cs" />
     <Compile Include="Intro_and_shit.cs" />
     <Compile Include="InventoryItem.cs" />

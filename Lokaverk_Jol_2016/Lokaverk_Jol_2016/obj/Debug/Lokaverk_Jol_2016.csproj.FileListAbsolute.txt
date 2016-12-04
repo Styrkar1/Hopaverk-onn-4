@@ -37,3 +37,6 @@ C:\Users\0501983759\Desktop\Lokaverk_Jol_2016\Lokaverk_Jol_2016\obj\Debug\Lokave
 C:\Users\0501983759\Desktop\New folder\Lokaverk_Jol_2016\Lokaverk_Jol_2016\bin\Debug\Lokaverk_Jol_2016.exe.config
 C:\Users\0501983759\Desktop\New folder\Lokaverk_Jol_2016\Lokaverk_Jol_2016\obj\Debug\Lokaverk_Jol_2016.exe
 C:\Users\0501983759\Desktop\New folder\Lokaverk_Jol_2016\Lokaverk_Jol_2016\obj\Debug\Lokaverk_Jol_2016.pdb
+\\skra\nem-redirect$\0501983759\Desktop\Lokaverk_Jol_2016\Lokaverk_Jol_2016\bin\Debug\Lokaverk_Jol_2016.exe.config
+\\skra\nem-redirect$\0501983759\Desktop\Lokaverk_Jol_2016\Lokaverk_Jol_2016\obj\Debug\Lokaverk_Jol_2016.exe
+\\skra\nem-redirect$\0501983759\Desktop\Lokaverk_Jol_2016\Lokaverk_Jol_2016\obj\Debug\Lokaverk_Jol_2016.pdb
